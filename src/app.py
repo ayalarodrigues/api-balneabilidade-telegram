@@ -376,7 +376,5 @@ def filtrar_por_zona(zona):
     return json_response(resposta)
 
 if __name__ == "__main__":
-    # lat, lon = -3.7227, -38.4793  # Praia do Futuro
-    # dados = get_forecast(lat, lon, "2025-09-10", "14:00")
-    # print(json.dumps(dados, indent=4, ensure_ascii=False))
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
