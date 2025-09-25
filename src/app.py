@@ -9,7 +9,7 @@ import subprocess
 import os
 import sys
 import requests
-from coordenadas import COORDENADAS_POR_CODIGO
+from .coordenadas import COORDENADAS_POR_CODIGO
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False #para suportar acentos
