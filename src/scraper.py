@@ -10,7 +10,7 @@ import pandas as pd
 import os
 
 # Importação direta, pois este arquivo pode ser executado de forma independente
-from coordenadas import COORDENADAS_POR_CODIGO
+from .coordenadas import COORDENADAS_POR_CODIGO
 
 def extract_point_code(nome: str) -> str:
     return (nome[:3] or "").strip().upper()
