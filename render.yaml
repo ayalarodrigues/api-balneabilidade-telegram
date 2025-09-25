@@ -3,14 +3,9 @@ services:
     name: balneabilidade-fortaleza-api
     env: python
     plan: free
-    buildCommand: |
-      pip install --upgrade pip setuptools wheel
-      pip install -r requirements.txt
-    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    buildCommand: pip install -r requirements.txt
+    # COMANDO CORRIGIDO ABAIXO
+    startCommand: gunicorn src.app:app
     envVars:
       - key: PYTHON_VERSION
-        value: 3.12.6
-      - key: FLASK_ENV
-        value: production
-      - key: PORT
-        value: 10000
+        value: 3.10.13 # Versão estável e compatível
