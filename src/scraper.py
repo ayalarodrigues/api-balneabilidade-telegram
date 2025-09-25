@@ -8,7 +8,7 @@ import camelot
 import pandas as pd
 import os
 
-from coordenadas import COORDENADAS_POR_CODIGO
+from .coordenadas import COORDENADAS_POR_CODIGO
 
 # --- Extrair primeiros caracteres do nome das praias
 def extract_point_code(nome: str) -> str:
